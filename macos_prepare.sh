@@ -11,4 +11,4 @@ gcc ./getms.c -o ./getms
 ./gradlew --no-daemon clean
 
 # Build the distributable
-./gradlew --no-daemon :composeApp:createReleaseDistributable
+./gradlew --no-daemon createReleaseDistributable

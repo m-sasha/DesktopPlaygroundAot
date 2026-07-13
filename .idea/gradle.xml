@@ -4,11 +4,35 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins" name="gradle-plugins">
+                <projects>
+                  <project path="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins" />
+                  <project path="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/compose" />
+                  <project path="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/jdk-version-probe" />
+                  <project path="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/preview-rpc" />
+                </projects>
+              </build>
+              <build path="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/buildSrc" name="buildSrc">
+                <projects>
+                  <project path="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/buildSrc" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleJvm" value="jbr-21" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins" />
+            <option value="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/buildSrc" />
+            <option value="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/compose" />
+            <option value="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/jdk-version-probe" />
+            <option value="$PROJECT_DIR$/../compose-multiplatform/gradle-plugins/preview-rpc" />
           </set>
         </option>
       </GradleProjectSettings>

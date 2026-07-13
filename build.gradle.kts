@@ -1,9 +1,7 @@
 import org.gradle.internal.jvm.inspection.JvmVendor
 import org.gradle.jvm.toolchain.internal.DefaultJvmVendorSpec
 import org.jetbrains.compose.desktop.application.dsl.AotMode
-//import org.jetbrains.compose.desktop.application.dsl.AppCdsMode
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.compilerRunner.processCompilerOutput
 
 plugins {
     kotlin("jvm")
