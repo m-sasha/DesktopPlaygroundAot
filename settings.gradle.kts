@@ -1,5 +1,5 @@
 pluginManagement {
-    includeBuild("../compose-multiplatform/gradle-plugins")
+    includeBuild("../../compose-multiplatform/gradle-plugins")
 
     repositories {
         mavenLocal()
