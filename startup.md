@@ -1,8 +1,8 @@
-# Startup Timing
+# Startup Time Comparison
 
 All values in milliseconds.
 
-## macOS
+## macOS (M1 Ultra)
 
 ### Cold start
 
@@ -21,7 +21,7 @@ All values in milliseconds.
 | AOT Prebuild | 69 | 368 | 437 |                 2.1× |
 
 
-## Windows
+## Windows (Dell Precision 5690)
 
 ### Cold start
 
