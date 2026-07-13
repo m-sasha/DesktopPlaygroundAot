@@ -1,100 +1,44 @@
-# macOS
+# Startup Timing
 
-## No AOT
+All values in milliseconds. Speedup relative to No AOT baseline.
 
-### Cold
-From shell execution to main start: 1133ms
-From main start to window open: 884ms
-Total: 2017ms
+## macOS
 
-### Hot (2nd run)
-From shell execution to main start: 76ms
-From main start to window open: 860ms
-Total: 936ms
+### Cold start
 
+| Build mode | Shell → Main | Main → Window | Total | Speedup (vs. no AOT) |
+|---|---:|---:|---:|---------------------:|
+| No AOT | 1133 | 884 | 2017 |                    — |
+| AppCDS Prebuild | 48 | 478 | 526 |                 3.8× |
+| AOT Prebuild | 67 | 357 | 424 |                 4.8× |
 
-## AppCdsPrebuild
+### Hot start (2nd run)
 
-### Cold
-From shell execution to main start: 48ms
-From main start to window open: 478ms
-Total: 526ms
-
-### Hot (2nd run)
-From shell execution to main start: 46ms
-From main start to window open: 488ms
-Total: 534ms
+| Build mode | Shell → Main | Main → Window | Total | Speedup (vs. no AOT) |
+|---|---:|---:|---:|---------------------:|
+| No AOT | 76 | 860 | 936 |                    — |
+| AppCDS Prebuild | 46 | 488 | 534 |                 1.8× |
+| AOT Prebuild | 69 | 368 | 437 |                 2.1× |
 
 
-## AotPrebuild
+## Windows
 
-### Cold
-From shell execution to main start: 67ms
-From main start to window open: 357ms
-Total: 424ms
+### Cold start
 
-### Hot (2nd run)
-From shell execution to main start: 69ms
-From main start to window open: 368ms
-Total: 437ms
+| Build mode | Shell → Main | Main → Window | Total | Speedup (vs. no AOT) |
+|---|---:|---:|---:|---------------------:|
+| No AOT | 145 | 1211 | 1356 |                    — |
+| AppCDS Prebuild | 110 | 718 | 828 |                 1.6× |
+| AppCDS Prebuild (relocated) | 106 | 1111 | 1217 |                 1.1× |
+| AOT Prebuild | 130 | 520 | 650 |                 2.1× |
+| AOT Prebuild (relocated) | 402 | 517 | 919 |                 1.5× |
 
+### Hot start (2nd run)
 
-# Windows
-
-## No AOT
-
-### Cold
-From shell execution to main start: 145ms
-From main start to window open: 1211ms
-Total: 1356ms
-
-### Hot (2nd run)
-From shell execution to main start: 137ms
-From main start to window open: 1193ms
-Total: 1330ms
-
-
-## AppCdsPrebuild
-
-### Cold
-From shell execution to main start: 110ms
-From main start to window open: 718ms
-Total: 828ms
-
-### Hot (2nd run)
-From shell execution to main start: 113ms
-From main start to window open: 688ms
-Total: 801ms
-
-### Cold relocated
-From shell execution to main start: 106ms
-From main start to window open: 1111ms
-Total: 1217ms
-
-### Hot (2nd run) relocated
-From shell execution to main start: 103ms
-From main start to window open: 1092ms
-Total: 1195ms
-
-
-## AotPrebuild
-
-### Cold
-From shell execution to main start: 130ms
-From main start to window open: 520ms
-Total: 650ms
-
-### Hot (2nd run)
-From shell execution to main start: 126ms
-From main start to window open: 530ms
-Total: 656ms
-
-### Cold relocated
-From shell execution to main start: 402ms
-From main start to window open: 517ms
-Total: 919ms
-
-### Hot (2nd run) relocated 
-From shell execution to main start: 391ms
-From main start to window open: 526ms
-Total: 917ms
+| Build mode | Shell → Main | Main → Window | Total | Speedup (vs. no AOT) |
+|---|---:|---:|---:|---------------------:|
+| No AOT | 137 | 1193 | 1330 |                    — |
+| AppCDS Prebuild | 113 | 688 | 801 |                 1.7× |
+| AppCDS Prebuild (relocated) | 103 | 1092 | 1195 |                 1.1× |
+| AOT Prebuild | 126 | 530 | 656 |                 2.0× |
+| AOT Prebuild (relocated) | 391 | 526 | 917 |                 1.5× |
