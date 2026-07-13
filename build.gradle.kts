@@ -43,14 +43,6 @@ compose.desktop {
         }.get().metadata.installationPath.asFile.absolutePath
 
         buildTypes.release {
-            proguard {
-                isEnabled = true
-                joinOutputJars = true
-
-                configurationFiles.from(
-                    rootProject.file("proguard_rules/app.pro")
-                )
-            }
             aot {
                 mode = AotMode.AotPrebuild
                 logging = true
