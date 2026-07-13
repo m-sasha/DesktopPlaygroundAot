@@ -43,6 +43,9 @@ compose.desktop {
         }.get().metadata.installationPath.asFile.absolutePath
 
         buildTypes.release {
+            proguard {
+                isEnabled = false
+            }
             aot {
                 mode = AotMode.AotPrebuild
                 logging = true
