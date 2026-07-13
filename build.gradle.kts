@@ -53,8 +53,6 @@ compose.desktop {
             }
         }
 
-        jvmArgs += "--enable-native-access=ALL-UNNAMED"
-
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "DesktopPlayground"
