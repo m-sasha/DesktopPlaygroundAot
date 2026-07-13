@@ -44,7 +44,12 @@ compose.desktop {
 
         buildTypes.release {
             proguard {
-                isEnabled = false
+                isEnabled = true
+                joinOutputJars = true
+
+                configurationFiles.from(
+                    rootProject.file("proguard_rules/app.pro")
+                )
             }
             aot {
                 mode = AotMode.AotPrebuild
