@@ -5,7 +5,7 @@
 - `win/macos_prepare.sh`: Script that builds the app
 - `win/macos_run.sh`: Script that runs the app
 
-## Preparation
+## Instructions
 
 1. Check out the compose-multiplatform project on the m-sasha/aot branch
 2. Edit the `includeBuild` in settings.gradle.kts (of *this* project) to point to the correct location of the
@@ -15,3 +15,10 @@
 5. Run the `_prepare.sh` script
 6. Run the `_run.sh` script
 7. Repeat as necessary
+
+## To test the app "relocated"
+
+1. Move the app directory from `build/compose/binaries/main-release/app` to a different location
+2. Edit the `_run.sh` file to run it from there
+3. Delete the `build` directory
+4. Run the `_run.sh` script
