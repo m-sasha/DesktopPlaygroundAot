@@ -29,9 +29,9 @@ All values in milliseconds. Speedup relative to No AOT baseline.
 |---|---:|---:|---:|---------------------:|
 | No AOT | 145 | 1211 | 1356 |                    — |
 | AppCDS Prebuild | 110 | 718 | 828 |                 1.6× |
-| AppCDS Prebuild (relocated) | 106 | 1111 | 1217 |                 1.1× |
+| AppCDS Prebuild (relocated*) | 106 | 1111 | 1217 |                 1.1× |
 | AOT Prebuild | 130 | 520 | 650 |                 2.1× |
-| AOT Prebuild (relocated) | 402 | 517 | 919 |                 1.5× |
+| AOT Prebuild (relocated*) | 402 | 517 | 919 |                 1.5× |
 
 ### Hot start (2nd run)
 
@@ -39,6 +39,11 @@ All values in milliseconds. Speedup relative to No AOT baseline.
 |---|---:|---:|---:|---------------------:|
 | No AOT | 137 | 1193 | 1330 |                    — |
 | AppCDS Prebuild | 113 | 688 | 801 |                 1.7× |
-| AppCDS Prebuild (relocated) | 103 | 1092 | 1195 |                 1.1× |
+| AppCDS Prebuild (relocated*) | 103 | 1092 | 1195 |                 1.1× |
 | AOT Prebuild | 126 | 530 | 656 |                 2.0× |
-| AOT Prebuild (relocated) | 391 | 526 | 917 |                 1.5× |
+| AOT Prebuild (relocated*) | 391 | 526 | 917 |                 1.5× |
+
+
+*Executed in a such a way that the jars at the classpath with which the app was packages don't exist.
+This is important due to https://youtrack.jetbrains.com/issue/JBR-9098/AppCDS-writes-local-paths-into-.jsa-archive
+ 
