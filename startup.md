@@ -1,6 +1,6 @@
 # Startup Timing
 
-All values in milliseconds. Speedup relative to No AOT baseline.
+All values in milliseconds.
 
 ## macOS
 
